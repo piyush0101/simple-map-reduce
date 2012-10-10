@@ -9,6 +9,7 @@ case class MAP(word: String)
 case class REDUCE()
 
 class MapperReducerActor extends Actor {
+
   def act() {
     var accumulator = HashMap.empty[String, MutableList[Int]]
     loop {

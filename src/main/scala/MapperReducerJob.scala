@@ -1,7 +1,6 @@
 package main.scala
 
-import actors.{Actor, !}
-import collection.immutable.HashMap
+import actors.Actor
 
 case class RESULTS(results: Map[String, Int])
 
@@ -18,7 +17,7 @@ object MapperReducerJob {
 class MapperReducerJob(actor: Actor) extends Actor {
 
   def act() {
-    val data = "hello hello world world"
+    val data = "hello hello world world bye bye"
 
     data.split(" ").foreach(
       (x:String) => actor ! MAP(x)
