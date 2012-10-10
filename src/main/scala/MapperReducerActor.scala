@@ -4,7 +4,7 @@ import actors.Actor
 import collection.immutable.HashMap
 import collection.mutable.MutableList
 
-case class MAP(word: String)
+case class MAP(value: String)
 
 case class REDUCE()
 
