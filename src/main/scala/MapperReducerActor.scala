@@ -1,25 +1,23 @@
 package main.scala
 
 import actors.Actor
-import collection.immutable.HashMap
 import collection.mutable.MutableList
+import collection.mutable
 
-case class MAP(value: String)
-
-case class REDUCE()
-
-class MapperReducerActor extends Actor {
+class MapperReducerActor[T]
+  (f1: ((mutable.MutableList[T]) => mutable.MutableList[T]),
+    f2: (mutable.MutableList[T] => T))
+      extends Actor {
 
   def act() {
-    var accumulator = HashMap.empty[String, MutableList[Int]]
     loop {
+      var accumulator = mutable.HashMap.empty[String, MutableList[T]]
       react {
-        case MAP(word) =>
-          var list = accumulator.getOrElse(word, new MutableList[Int]())
-          accumulator += word -> (list += 1)
+        case MAP(key) =>
+          accumulator += key -> f1(accumulator.getOrElse(key, new mutable.MutableList[T]))
 
         case REDUCE() =>
-          val reduced = accumulator.mapValues((li: MutableList[Int]) => li.foldLeft(0)((x:Int, y:Int) => x+y))
+          val reduced = accumulator.mapValues((li: MutableList[T]) => f2(li))
           sender ! RESULTS(reduced)
       }
     }
