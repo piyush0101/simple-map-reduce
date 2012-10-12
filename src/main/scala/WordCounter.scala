@@ -13,8 +13,6 @@ object WordCounter {
     li.foldLeft(0)((x: Int, y: Int) => x + y)
   }
 
-  val retrieve = (m: mutable.HashMap[String, Int]) => {
-     m
-  }
+  def run =
 
 }

@@ -1,7 +1,6 @@
 package main.scala
 
 import actors.Actor
-import collection.mutable.MutableList
 import collection.mutable
 
 class MapperReducerActor[T]
@@ -10,14 +9,16 @@ class MapperReducerActor[T]
       extends Actor {
 
   def act() {
+    var accumulator = mutable.HashMap.empty[String, mutable.MutableList[T]]
     loop {
-      var accumulator = mutable.HashMap.empty[String, MutableList[T]]
       react {
         case MAP(key) =>
-          accumulator += key -> f1(accumulator.getOrElse(key, new mutable.MutableList[T]))
+          var li = accumulator.getOrElse(key, new mutable.MutableList[T])
+          var accLi = f1(li)
+          accumulator += key -> accLi
 
         case REDUCE() =>
-          val reduced = accumulator.mapValues((li: MutableList[T]) => f2(li))
+          val reduced = accumulator.mapValues((li: mutable.MutableList[T]) => f2(li))
           sender ! RESULTS(reduced)
       }
     }
