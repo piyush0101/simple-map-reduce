@@ -4,7 +4,7 @@ import actors.Actor
 import collection.mutable
 
 class MapperReducerActor[T]
-  (f1: ((mutable.MutableList[T]) => mutable.MutableList[T]),
+  (f1: ((mutable.MutableList[T], Any) => mutable.MutableList[T]),
     f2: (mutable.MutableList[T] => T))
       extends Actor {
 
@@ -12,9 +12,9 @@ class MapperReducerActor[T]
     var accumulator = mutable.HashMap.empty[String, mutable.MutableList[T]]
     loop {
       react {
-        case MAP(key) =>
+        case MAP(key, data) =>
           var li = accumulator.getOrElse(key, new mutable.MutableList[T])
-          var accLi = f1(li)
+          var accLi = f1(li, data)
           accumulator += key -> accLi
 
         case REDUCE() =>

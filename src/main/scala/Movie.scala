@@ -1,7 +1,27 @@
 package main.scala
 
-class Movie(name: String, rating: Double, year: String) {
+class Movie(id: String, rating: java.lang.Double, name: String, year: String) {
 
-  val emit(String => List[Movie])
+  override def toString = name
 
+  def getId = id
+
+  def getRating = rating
+
+  def getName = name
+
+  def getYear = year
+
+  override def equals(obj: Any): Boolean = {
+    obj match {
+      case obj: Movie =>
+        this.id.equals(obj.getId) &&
+          this.getName.equals(obj.getName) &&
+          this.getYear.equals(obj.getYear) &&
+          this.getRating.equals(obj.getRating)
+      case _ => false
+    }
+  }
+
+  override def hashCode() = super.hashCode()
 }

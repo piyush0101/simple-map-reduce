@@ -2,6 +2,6 @@ package main.scala
 
 trait DataSource {
 
-  def forEach(f: String => Unit)
+  def forEach(f: (String, Any) => Unit)
 
 }
