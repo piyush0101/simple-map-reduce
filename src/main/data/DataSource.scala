@@ -1,4 +1,4 @@
-package main.scala
+package main.data
 
 trait DataSource {
 

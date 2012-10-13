@@ -1,7 +1,8 @@
-package main.scala
+package main.data
 
 import java.io.File
 import io.Source
+import main.scala.Movie
 import java.lang.Double
 
 class MovieDataSource(file: File) extends DataSource{
@@ -9,8 +10,12 @@ class MovieDataSource(file: File) extends DataSource{
   def forEach(f: (String, Any) => Unit) {
        for (line <- Source.fromFile(file).getLines) {
          val fields: Array[String] = line.split("\t")
-         val movie = new Movie(fields(0), Double.parseDouble(fields(1)), fields(2), fields(3))
-         f(fields(3), movie)
+         val id = fields(0)
+         val name = fields(2)
+         val rating = Double.parseDouble(fields(1))
+         val year = fields(3)
+         val movie = new Movie(id, rating, name, year)
+         f(year, movie)
       }
   }
 

@@ -2,6 +2,7 @@ package main.scala
 
 import actors.Actor
 import java.io.File
+import main.data.{MovieDataSource, DataSource}
 
 case class MAP(key: String, data:Any)
 
@@ -11,8 +12,6 @@ case class RESULTS(results: Any)
 
 object MapperReducerJob {
   def main(args: Array[String]) {
-
-    //val source = new WordCountDataSource("hello hello world world bye bye")
 
     val source = new MovieDataSource(new File("movies.txt"))
     val actor = new MapperReducerActor[Movie](MovieRatingByYear.emit, MovieRatingByYear.collect)

@@ -1,5 +1,4 @@
-package main.scala
-
+package main.data
 
 class WordCountDataSource(data: String) extends DataSource {
 
