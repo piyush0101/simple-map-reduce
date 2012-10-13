@@ -34,6 +34,7 @@ class MapperReducerJob(actor: Actor, source: DataSource) extends Actor {
       react {
         case RESULTS(results) =>
           println(results)
+          System.exit(0)
       }
     }
   }
