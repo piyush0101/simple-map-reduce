@@ -12,7 +12,6 @@ object MovieRatingByYear {
   }
 
   val collect = (li: mutable.MutableList[Movie]) => {
-    li.sortWith((m1: Movie, m2: Movie) => m1.getRating > m2.getRating)
-    li(0)
+    li.reduceLeft((m1:Movie, m2:Movie) => if (m1.getRating > m2.getRating) m1 else m2)
   }
 }
