@@ -23,5 +23,12 @@ class Movie(id: String, rating: java.lang.Double, name: String, year: String) {
     }
   }
 
-  override def hashCode() = super.hashCode()
+  override def hashCode(): Int = {
+    var hash = 7
+    hash = 31 * hash + id.length
+    hash = 31 * hash + rating.intValue()
+    hash = 31 * hash + name.length
+    hash = 31 * hash + year.length
+    hash
+  }
 }
