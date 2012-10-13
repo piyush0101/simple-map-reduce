@@ -13,7 +13,7 @@ class MapperReducerActor[T]
     loop {
       react {
         case MAP(key, data) =>
-          var li = accumulator.getOrElse(key, new mutable.MutableList[T])
+          val li = accumulator.getOrElse(key, new mutable.MutableList[T])
           accumulator += key -> emit(li, data)
 
         case REDUCE() =>
