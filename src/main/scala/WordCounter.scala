@@ -6,7 +6,6 @@ object WordCounter {
 
   val emit = (li: mutable.MutableList[Int], i: Any) => {
     li += 1
-    li
   }
 
   val collect = (li: mutable.MutableList[Int]) => {
