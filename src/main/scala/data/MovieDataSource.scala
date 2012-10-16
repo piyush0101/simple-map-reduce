@@ -5,7 +5,7 @@ import io.Source
 import main.scala.Movie
 import java.lang.Double
 
-class MovieDataSource(file: File) extends DataSource{
+class MovieDataSource(file: File) extends DataSource {
 
   def forEach(f: (String, Any) => Unit) {
        for (line <- Source.fromFile(file).getLines) {

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63572f05-fa6d-40cb-8f82-6e08a5bf4e88" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/Movie.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/MovieDataSource.scala" />
+    <list default="true" id="63572f05-fa6d-40cb-8f82-6e08a5bf4e88" name="Default" comment="missing hashcode in Movie class">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/MovieRatingByYearTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/WordCounterTest.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/data/DataSource.scala" afterPath="$PROJECT_DIR$/src/main/scala/data/DataSource.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/data/MovieDataSource.scala" afterPath="$PROJECT_DIR$/src/main/scala/data/MovieDataSource.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/data/WordCountDataSource.scala" afterPath="$PROJECT_DIR$/src/main/scala/data/WordCountDataSource.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MapperReducerJob.scala" afterPath="$PROJECT_DIR$/src/main/scala/MapperReducerJob.scala" />
     </list>
     <ignored path="funwithscala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,30 +69,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MapperReducerActor.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerActor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="15" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#20#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MapperReducerJob.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerJob.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieDataSource.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/MovieDataSource.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="10" selection-start="161" selection-end="161" vertical-scroll-proportion="0.21880065">
+            <state line="41" column="22" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#20#39#0" expanded="true" />
               </folding>
@@ -93,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/movies.txt">
+      <file leaf-file-name="MapperReducerActor.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+            <state line="22" column="58" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,7 +92,7 @@
       <file leaf-file-name="Movie.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Movie.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="32" selection-start="90" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="28" column="40" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,25 +101,63 @@
       <file leaf-file-name="WordCounter.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/WordCounter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="11" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+            <state line="15" column="7" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSource.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/DataSource.scala">
+      <file leaf-file-name="WordCounterTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/WordCounterTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0375">
+              <folding>
+                <element signature="e#19#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="23" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="32" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieDataSource.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/data/MovieDataSource.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="53" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieRatingByYearTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/MovieRatingByYearTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="WordCountDataSource.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/WordCountDataSource.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/data/WordCountDataSource.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+            <state line="2" column="6" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,23 +173,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="expandStates">
+      <map>
+        <entry key="funwithscala" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Rational.scala" />
-        <option value="$PROJECT_DIR$/src/MapperReducerActor.scala" />
         <option value="$PROJECT_DIR$/src/MapperReducerJob.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DataSource.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/MapperReducer.scala" />
+        <option value="$PROJECT_DIR$/src/movies.txt" />
+        <option value="$PROJECT_DIR$/src/main/scala/DataSource.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/WordCountDataSource.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MovieDataSource.scala" />
+        <option value="$PROJECT_DIR$/src/main/data/MovieDataSource.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/MovieRatingByYear.scala" />
+        <option value="$PROJECT_DIR$/src/main/data/WordCountDataSource.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Movie.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/WordCounter.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/MovieRatingByYearTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/data/MovieDataSource.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/MapperReducerActor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/MapperReducerJob.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/WordCounter.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Movie.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/MovieDataSource.scala" />
-        <option value="$PROJECT_DIR$/src/movies.txt" />
+        <option value="$PROJECT_DIR$/src/test/scala/WordCounterTest.scala" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
@@ -197,22 +236,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="funwithscala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -236,6 +269,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,6 +316,38 @@
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="funwithscala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -298,7 +367,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="139" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="141" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
@@ -325,9 +396,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/scala" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.MapperReducerJob">
     <configuration default="false" name="Rational" type="Application" factoryName="Application" temporary="true">
@@ -544,7 +622,35 @@
       <created>1350074109166</created>
       <updated>1350074109166</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modified map reduce to be more generic">
+      <created>1350102040650</created>
+      <updated>1350102040650</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cleaning up">
+      <created>1350102488105</created>
+      <updated>1350102488105</updated>
+    </task>
+    <task id="LOCAL-00008" summary="more elegantly finding the movie with highest rating">
+      <created>1350103716128</created>
+      <updated>1350103716128</updated>
+    </task>
+    <task id="LOCAL-00009" summary="missing hashcode in Movie class">
+      <created>1350141978206</created>
+      <updated>1350141978206</updated>
+    </task>
+    <task id="LOCAL-00010" summary="mapperreducer job never returns">
+      <created>1350144669232</created>
+      <updated>1350144669232</updated>
+    </task>
+    <task id="LOCAL-00011" summary="unnecessary vars">
+      <created>1350144883468</created>
+      <updated>1350144883468</updated>
+    </task>
+    <task id="LOCAL-00012" summary="removing unnecessary return value from WordCounter emit function">
+      <created>1350194060940</created>
+      <updated>1350194060940</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -553,7 +659,7 @@
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -565,10 +671,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.6741742" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24928162" sideWeight="0.6711712" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32582584" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24928162" sideWeight="0.6741742" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32582584" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -613,7 +719,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with accumulator being empty" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing unnecessary return value from WordCounter emit function" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -631,6 +737,13 @@
     <MESSAGE value="adding .gitignore file to vc" />
     <MESSAGE value="heavy concept lifting to make map reduce work for generic data sources. still figuring out scala's closure scoping" />
     <MESSAGE value="fixed issue with accumulator being empty" />
+    <MESSAGE value="modified map reduce to be more generic" />
+    <MESSAGE value="cleaning up" />
+    <MESSAGE value="more elegantly finding the movie with highest rating" />
+    <MESSAGE value="missing hashcode in Movie class" />
+    <MESSAGE value="mapperreducer job never returns" />
+    <MESSAGE value="unnecessary vars" />
+    <MESSAGE value="removing unnecessary return value from WordCounter emit function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -640,83 +753,190 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/sdk/scala/scala-2.9.2/src/scala-library-src.jar!/scala/Predef.scala">
+    <entry file="jar://$USER_HOME$/sdk/scala/scala-2.9.2/src/scala-library-src.jar!/scala/io/BufferedSource.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="2" selection-start="4448" selection-end="4453" vertical-scroll-proportion="0.0" />
+        <state line="19" column="6" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+    <entry file="jar://$USER_HOME$/sdk/scala/scala-2.9.2/src/scala-library-src.jar!/scala/io/Source.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="13" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.0" />
+        <state line="82" column="60" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DataSource.scala">
+    <entry file="file://$PROJECT_DIR$/movies.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="jar://$USER_HOME$/sdk/scala/scala-2.9.2/src/scala-library-src.jar!/scala/collection/LinearSeqOptimized.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="67" column="7" selection-start="1971" selection-end="1971" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerActor.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/data/DataSource.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="15" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#20#39#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="4" column="30" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MovieRatingByYear.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="7" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/WordCounter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+        <state line="15" column="7" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/data/WordCountDataSource.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerJob.scala">
+    <entry file="file://$PROJECT_DIR$/build.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+        <state line="1" column="32" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/WordCountDataSource.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/data/MovieDataSource.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+        <state line="7" column="53" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/MovieRatingByYearTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="58" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Movie.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="90" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="40" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/movies.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MapperReducerJob.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MovieDataSource.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="161" selection-end="161" vertical-scroll-proportion="0.21880065">
+        <state line="41" column="22" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#20#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/WordCounterTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0375">
+          <folding>
+            <element signature="e#19#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Scala</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>mapreduce</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-compiler</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
