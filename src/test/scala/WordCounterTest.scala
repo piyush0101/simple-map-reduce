@@ -6,7 +6,7 @@ import org.scalatest._
 
 class WordCounterTest extends FunSuite {
 
-  test ("word counter properly counts words") {
+  test("word counter properly counts words") {
     val source = new WordCountDataSource("hello world hello world bye world")
     val actor = new MapperReducerActor[Int](WordCounter.emit, WordCounter.collect)
 
@@ -15,8 +15,12 @@ class WordCounterTest extends FunSuite {
     job.start()
     actor.start()
 
-    assert(job.getResults.get("hello").equals(2))
+    val result = job.getResults.get("hello")
+    result match {
+      case Some(result)=>
+        assert(result == 2)
+      case None =>
+    }
   }
-
 }
 
