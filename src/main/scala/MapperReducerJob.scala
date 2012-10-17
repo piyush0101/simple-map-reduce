@@ -3,8 +3,9 @@ package main.scala
 import actors.Actor
 import java.io.File
 import main.data.{DataSource, MovieDataSource}
+import collection.MapLike
+import reflect.This
 import collection.immutable.HashMap
-import collection.parallel.mutable
 
 case class MAP(key: String, data: Any)
 
@@ -38,12 +39,12 @@ class MapperReducerJob[T](actor: Actor, source: DataSource) extends Actor {
       react {
         case RESULTS(results) =>
           results match {
-            case results: HashMap[String, T] =>  reduced ++= results
-            case _ =>
+            case results: MapLike[String, T, This] =>
+              reduced = results.toMap[String, T].asInstanceOf[HashMap[String, T]]
           }
       }
     }
   }
 
-  def getResults: Map[String, T] = reduced
+  def getResults: HashMap[String, T] = reduced
 }
