@@ -13,18 +13,6 @@ case class REDUCE()
 
 case class RESULTS(results: Any)
 
-object MapperReducerJob {
-  def main(args: Array[String]) {
-
-    val source = new MovieDataSource(new File("movies.txt"))
-    val actor = new MapperReducerActor[Movie](MovieRatingByYear.emit, MovieRatingByYear.collect)
-    val job = new MapperReducerJob[Movie](actor, source)
-
-    job.start()
-    actor.start()
-  }
-}
-
 class MapperReducerJob[T](actor: Actor, source: DataSource) extends Actor {
 
   var reduced = new HashMap[String, T]
