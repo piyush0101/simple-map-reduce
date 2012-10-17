@@ -11,7 +11,7 @@ class WordCounterTest extends FunSuite {
     val source = new WordCountDataSource("hello world hello world bye world")
     val actor = new MapperReducerActor(WordCounter.emit, WordCounter.collect)
 
-    val job = new MapperReducerJob(actor, source)
+    val job = new MapperReducerJob[Int](actor, source)
 
     job.start()
     actor.start()

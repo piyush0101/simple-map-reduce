@@ -40,7 +40,7 @@ class MapperReducerJob[T](actor: Actor, source: DataSource) extends Actor {
         case RESULTS(results) =>
           results match {
             case results: MapLike[String, T, This] =>
-              reduced = results.toMap[String, T].asInstanceOf[HashMap[String, T]]
+              results.toMap[String, T].foreach[Unit](p => reduced += p._1 -> p._2)
           }
       }
     }
