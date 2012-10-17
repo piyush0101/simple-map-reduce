@@ -1,4 +1,3 @@
-/*
 package test.scala
 
 import main.data.WordCountDataSource
@@ -20,4 +19,4 @@ class WordCounterTest extends FunSuite {
   }
 
 }
-*/
+
