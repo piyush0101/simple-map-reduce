@@ -11,13 +11,14 @@ import java.io.File
 
 class MovieRatingByYearTest extends FlatSpec with ShouldMatchers {
 
-  "ShawshankRedemption" should "be the highest rated movie for year 1994" in {
+  "MovieCounter" should "give back ShawshankRedemption as the highest rated movie for year 1994" in {
     val source = new MovieDataSource(new File("movies.txt"))
     val actor = new MapperReducerActor[Movie](MovieRatingByYear.emit, MovieRatingByYear.collect)
 
     val job = new MapperReducerJob[Movie](actor, source)
     val results = job.run
 
+    results.valueAt("1994") should equal (new Movie("614692", 9.2, "The Shawshank Redemption", "1994"))
   }
 
 }
