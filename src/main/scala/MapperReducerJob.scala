@@ -2,37 +2,22 @@ package main.scala
 
 import actors.Actor
 import java.io.File
-import main.data.{DataSource, MovieDataSource}
+import main.data.{WordCountDataSource, DataSource, MovieDataSource}
 import collection.MapLike
 import reflect.This
 import collection.immutable.HashMap
+import javax.xml.ws.Response
 
-case class MAP(key: String, data: Any)
+case class MAPREDUCE(source: DataSource)
 
-case class REDUCE()
-
-case class RESULTS(results: Any)
-
-class MapperReducerJob[T](actor: Actor, source: DataSource) extends Actor {
-
-  var reduced = new HashMap[String, T]
-
-  def act() {
-
-    source.forEach((x: String, y: Any) => actor ! MAP(x, y))
-
-    actor ! REDUCE()
-
-    loop {
-      react {
-        case RESULTS(results) =>
-          results match {
-            case results: MapLike[String, T, This] =>
-              results.toMap[String, T].foreach[Unit](p => reduced += p._1 -> p._2)
-          }
-      }
+class MapperReducerJob[T](actor: Actor, source: DataSource) {
+  def run: Map[String, T] = {
+    actor.start()
+    var reduced = new HashMap[String, T]
+    val results = actor !! MAPREDUCE(source)
+    results.inputChannel.receive {
+      case msg: MapLike[String, T, This] => msg.foreach(p => reduced += p._1 -> p._2)
     }
+    reduced
   }
-
-  def getResults: HashMap[String, T] = reduced
 }

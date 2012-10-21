@@ -3,24 +3,24 @@ package test.scala
 import main.data.WordCountDataSource
 import main.scala.{MapperReducerJob, WordCounter, MapperReducerActor}
 import org.scalatest._
+import org.scalatest.FlatSpec
+import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.PartialFunctionValues._
 
-class WordCounterTest extends FunSuite {
+class WordCounterTest extends FlatSpec with ShouldMatchers {
 
-  test("word counter properly counts words") {
+  "Word Counter" should "properly count words"  in {
     val source = new WordCountDataSource("hello world hello world bye world")
     val actor = new MapperReducerActor[Int](WordCounter.emit, WordCounter.collect)
 
     val job = new MapperReducerJob[Int](actor, source)
 
-    job.start()
-    actor.start()
+    val results = job.run
 
-    val result = job.getResults.get("hello")
-    result match {
-      case Some(result)=>
-        assert(result == 2)
-      case None =>
-    }
+    results should have size(3)
+    results.valueAt("hello") should equal(2)
+    results.valueAt("world") should equal(3)
+    results.valueAt("bye") should equal(1)
   }
 }
 
