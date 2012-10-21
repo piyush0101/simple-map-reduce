@@ -11,10 +11,7 @@ class WordCounterTest extends FlatSpec with ShouldMatchers {
 
   "Word Counter" should "properly count words"  in {
     val source = new WordCountDataSource("hello world hello world bye world")
-    val actor = new MapperReducerActor[Int](WordCounter.emit, WordCounter.collect)
-
-    val job = new MapperReducerJob[Int](actor, source)
-
+    val job = new MapperReducerJob[Int](source, WordCounter.emit, WordCounter.collect)
     val results = job.run
 
     results should have size(3)
