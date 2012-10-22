@@ -16,6 +16,7 @@ class MovieRatingByYearTest extends FlatSpec with ShouldMatchers {
     val job = new MapperReducerJob[Movie](source, MovieRatingByYear.emit, MovieRatingByYear.collect)
     val results = job.run
 
+    results should have size (70)
     results.valueAt("1994") should equal (new Movie("614692", 9.2, "The Shawshank Redemption", "1994"))
   }
 
