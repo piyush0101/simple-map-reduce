@@ -11,8 +11,8 @@ class MovieDataSource(file: File) extends DataSource {
        for (line <- Source.fromFile(file).getLines) {
          val fields: Array[String] = line.split("\t")
          val id = fields(0).trim
-         val name = fields(2).trim
          val rating = Double.parseDouble(fields(1))
+         val name = fields(2).trim
          val year = fields(3).trim
          val movie = new Movie(id, rating, name, year)
          f(year, movie)
